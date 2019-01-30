@@ -1,0 +1,208 @@
+/*--------ABOUT--------*/
+.about {
+  margin: 5% auto;
+}
+
+.about__wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about__title {
+  text-align: center;
+}
+
+.about__quote {
+  width: 45%;
+  font-size: 1.75em;
+  margin-top: 0.5em;
+}
+
+.about__text {
+  width: 55%;
+}
+
+/* Small screens - MOBILE */
+
+/* max-width 640px, mobile-only styles, orientation: portrait */
+@media only screen and (max-width: 40em) and (orientation: portrait) {
+  .about {
+    padding-top: 2em;
+  }
+
+  .about__title {
+    text-align: left;
+  }
+
+  .about__quote {
+    display: none;
+  }
+
+  .about__text {
+    width: 100%;
+  }
+}
+
+/* max-width 640px, mobile-only styles, orientation: landscape */
+@media only screen and (max-width: 40em) and (orientation: landscape) {
+  .about {
+    padding-top: 2em;
+  }
+
+  .about__title {
+    text-align: left;
+  }
+
+  .about__quote {
+    display: none;
+  }
+
+  .about__text {
+    width: 100%;
+  }
+}
+
+/* Medium screens - TABLET */
+
+/* min-width 641px and max-width 1024px, orientation: portrait */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
+  .about__title {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .about__quote {
+    display: none;
+  }
+
+  .about__text {
+    width: 100%;
+  }
+}
+
+/* min-width 641px and max-width 1024px, orientation: landscape */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
+  .about {
+    padding-top: 2em;
+  }
+
+  .about__quote {
+    display: none;
+  }
+
+  .about__text {
+    width: 100%;
+  }
+}
+
+/* Large screens - DESKTOP */
+/* min-width 1025px, large screens */
+
+/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  .about {
+    padding-top: 2em;
+  }
+
+  .about__quote {
+    width: 42%;
+    font-size: 1.1em;
+    margin-top: 1em;
+  }
+
+  .about__text {
+    width: 56%;
+  }
+}
+
+/* XLarge screens */
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+  .about {
+    padding-top: 2em;
+  }
+
+  .about__title {
+    margin-bottom: 0.5em;
+    padding-bottom: 0;
+  }
+
+  .about__quote {
+    width: 42%;
+    font-size: 1.1em;
+    margin-top: 1em;
+  }
+
+  .about__text {
+    width: 55%;
+  }
+}
+
+/* XXLarge screens */
+/* min-width 1921px, xlarge screens */
+@media only screen and (min-width: 120.063em) {
+  .about {
+    padding-top: 2em;
+  }
+
+  .about__title {
+    margin-bottom: 0.5em;
+    padding-bottom: 0;
+  }
+
+  .about__quote {
+    width: 42%;
+    font-size: 1.1em;
+    margin-top: 1em;
+  }
+
+  .about__text {
+    width: 55%;
+  }
+}
+
+/* iPad Pro Portrait */
+@media only screen and (device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (min__moz-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (min-device-pixel-ratio: 1.5) {
+  .about__title {
+    text-align: left;
+  }
+
+  .about__quote {
+    display: none;
+  }
+
+  .about__text {
+    width: 100%;
+  }
+}
+
+/* iPad Pro Landscape */
+@media only screen and (device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (min__moz-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (min-device-pixel-ratio: 1.5) {
+  .about__title {
+    text-align: center;
+  }
+
+  .about__quote {
+    width: 42%;
+    font-size: 1.1em;
+    margin-top: 1em;
+  }
+
+  .about__text {
+    width: 56%;
+  }
+}

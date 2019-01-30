@@ -1,0 +1,208 @@
+.media {
+  width: 100%;
+  margin: 5% auto;
+}
+
+.media__title {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.media__wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.media__block {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.media__block--title {
+  text-align: center;
+  color: white;
+  z-index: 10;
+  position: relative;
+  justify-content: center;
+  margin-top: 40%;
+  font-size: 2em;
+  text-shadow: 1px 0 0 #000;
+  text-decoration: underline;
+}
+
+.media__block--image-link {
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+.media__block--image-link:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Small screens - MOBILE */
+
+/* max-width 640px, mobile-only styles, orientation: portrait */
+@media only screen and (max-width: 40em) and (orientation: portrait) {
+  .media__title {
+    text-align: left;
+  }
+  .media__wrapper {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .media__block {
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 1em;
+  }
+
+  .media__block--title {
+    margin-top: 33%;
+    font-size: 1.5em;
+  }
+
+  .media__block--image-link {
+    opacity: 1;
+  }
+}
+
+/* max-width 640px, mobile-only styles, orientation: landscape */
+@media only screen and (max-width: 40em) and (orientation: landscape) {
+  .media__title {
+    text-align: left;
+  }
+  .media__block {
+    width: 45%;
+    height: 60vh;
+  }
+
+  .media__block--title {
+    margin-top: 35%;
+    font-size: 1.5em;
+  }
+  .media__block--image-link {
+    opacity: 1;
+  }
+}
+
+/* Medium screens - TABLET */
+
+/* min-width 641px and max-width 1024px, orientation: portrait */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
+  .media__title {
+    text-align: left;
+  }
+  .media__block {
+    width: 49.5%;
+    height: 40vh;
+  }
+
+  .media__block--title {
+    margin-top: 50%;
+    font-size: 2em;
+  }
+}
+
+/* min-width 641px and max-width 1024px, orientation: landscape */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
+  .media__block {
+    width: 49.5%;
+    height: 70vh;
+  }
+
+  .media__block--title {
+    margin-top: 33%;
+    font-size: 1.5em;
+  }
+
+  .media__block--image-link {
+    opacity: 1;
+  }
+}
+
+/* Large screens - DESKTOP */
+/* min-width 1025px, large screens */
+
+/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 89.9em) {
+  .media__block {
+    width: 49.5%;
+    height: 70vh;
+  }
+
+  .media__block--title {
+    margin-top: 40%;
+    font-size: 2.5em;
+  }
+}
+
+/* XLarge screens */
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+@media only screen and (min-width: 90em) and (max-width: 120em) {
+  .media__block {
+    width: 49.5%;
+    height: 70vh;
+  }
+
+  .media__block--title {
+    margin-top: 42%;
+    font-size: 2.5em;
+  }
+}
+
+/* XXLarge screens */
+/* min-width 1921px, xlarge screens */
+@media only screen and (min-width: 120.063em) {
+  .media__block {
+    width: 49.5%;
+    height: 70vh;
+  }
+
+  .media__block--title {
+    margin-top: 42%;
+    font-size: 2.5em;
+  }
+}
+
+/* iPad Pro Portrait */
+@media only screen and (device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (min__moz-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (min-device-pixel-ratio: 1.5) {
+  .media__block {
+    width: 49.5%;
+    height: 40vh;
+  }
+
+  .media__block--title {
+    margin-top: 50%;
+    font-size: 2em;
+  }
+}
+
+/* iPad Pro Landscape */
+@media only screen and (device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (min__moz-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (min-device-pixel-ratio: 1.5) {
+  .media__block {
+    width: 45%;
+    height: 60vh;
+  }
+
+  .media__block--title {
+    margin-top: 50%;
+    font-size: 2em;
+  }
+}

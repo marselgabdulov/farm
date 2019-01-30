@@ -1,0 +1,70 @@
+/*------Arrow Button----*/
+
+.arrow {
+  width: 30px;
+  max-height: 40px;
+  display: inline-block;
+  z-index: 300;
+  margin-right: 1em;
+  position: absolute;
+  top: 80%;
+  left: 49%;
+  z-index: 2;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.arrow path {
+  stroke: white;
+  fill: transparent;
+  stroke-width: 3px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrow path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+}
+
+.arrow path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+}
+
+.arrow path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+}

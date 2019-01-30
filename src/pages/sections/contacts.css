@@ -1,0 +1,198 @@
+.contacts {
+  margin: 5% auto;
+}
+.contacts__wrapper {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__title {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.request-form {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  height: 3em;
+  margin: 0 auto 1em auto;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 1em;
+  text-indent: 1em;
+  border: 2px solid black;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  line-height: 2.8em;
+}
+::-webkit-input-placeholder {
+  /* Webkit */
+  line-height: 2.8em;
+}
+:-ms-input-placeholder {
+  /* IE */
+  line-height: 2.8em;
+}
+
+.form-button {
+  background-color: rgb(70, 168, 24);
+  color: white;
+  margin: 1em 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  height: 3em;
+  opacity: 0.8;
+}
+
+.form-button:hover {
+  opacity: 1;
+}
+
+.input-comment {
+  height: 7em;
+}
+
+/* Small screens - MOBILE */
+
+/* max-width 640px, mobile-only styles, orientation: portrait */
+@media only screen and (max-width: 40em) and (orientation: portrait) {
+  .contacts__wrapper {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .contacts__info {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .request-form {
+    width: 100%;
+  }
+}
+
+/* max-width 640px, mobile-only styles, orientation: landscape */
+@media only screen and (max-width: 40em) and (orientation: landscape) {
+  .contacts__wrapper {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .contacts__info {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .request-form {
+    width: 100%;
+  }
+}
+
+/* Medium screens - TABLET */
+
+/* min-width 641px and max-width 1024px, orientation: portrait */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
+  .contacts__info {
+    width: 38%;
+  }
+
+  .request-form {
+    width: 60%;
+  }
+}
+
+/* min-width 641px and max-width 1024px, orientation: landscape */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
+  .contacts__info {
+    width: 38%;
+  }
+
+  .request-form {
+    width: 60%;
+  }
+}
+
+/* Large screens - DESKTOP */
+/* min-width 1025px, large screens */
+
+/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 89.9em) {
+  .contacts__info {
+    width: 40%;
+  }
+
+  .request-form {
+    width: 59%;
+  }
+}
+
+/* XLarge screens */
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+@media only screen and (min-width: 90em) and (max-width: 120em) {
+  .contacts__info {
+    width: 42%;
+    margin-left: auto;
+  }
+
+  .request-form {
+    width: 58%;
+  }
+}
+
+/* XXLarge screens */
+/* min-width 1921px, xlarge screens */
+@media only screen and (min-width: 120.063em) {
+  .contacts__info {
+    width: 40%;
+  }
+
+  .request-form {
+    width: 59%;
+  }
+}
+
+/* iPad Pro Portrait */
+@media only screen and (device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (min__moz-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (min-device-pixel-ratio: 1.5) {
+  .contacts__info {
+    width: 36%;
+  }
+
+  .request-form {
+    width: 62%;
+  }
+}
+
+/* iPad Pro Landscape */
+@media only screen and (device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (min__moz-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (min-device-pixel-ratio: 1.5) {
+  .contacts__info {
+    width: 40%;
+  }
+
+  .request-form {
+    width: 59%;
+  }
+}
