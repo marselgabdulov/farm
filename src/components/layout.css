@@ -1,0 +1,312 @@
+@import '../normalize.css';
+
+@font-face {
+  font-family: 'GothamPro';
+  src: url('../fonts/GothamPro/GothamPro.woff') format('woff'),
+    url('../fonts/GothamPro/GothamPro.eot') format('eot'),
+    url('../fonts/GothamPro/GothamPro.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-size: 100%;
+  font-family: 'GothamPro';
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size-adjust: 0.5;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.625em;
+  line-height: 1.15384615;
+  margin-top: 0.3em;
+}
+
+h3 {
+  margin-bottom: 1em;
+}
+
+/* Main */
+
+.main {
+  width: 100%;
+  margin: auto;
+  flex: 1 0 auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+@media (min-width: 43.75em) {
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.125;
+  }
+  h2 {
+    font-size: 2em;
+    line-height: 1.25;
+  }
+  .main-wrapper {
+    font-size: 1em;
+    line-height: 1.375;
+  }
+}
+
+@media (min-width: 56.25em) {
+  h1 {
+    font-size: 3em;
+    line-height: 1.05;
+  }
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.25;
+  }
+}
+
+/* --------HEADER------------*/
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: white;
+}
+
+.header__wrapper {
+  height: 65px;
+  margin: auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.header__links {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__button {
+  background-color: white;
+  padding: 0 !important;
+  height: auto;
+  color: rgb(55, 53, 53);
+  border: none;
+  font: inherit;
+  cursor: pointer;
+
+  font-size: 1.2em;
+  outline: none;
+}
+
+.header__button:hover {
+  text-decoration: underline;
+}
+
+/* Small screens - MOBILE */
+
+/* max-width 640px, mobile-only styles, orientation: portrait */
+@media only screen and (max-width: 40em) and (orientation: portrait) {
+  .header {
+    font-size: 0.5em;
+  }
+  .header__wrapper {
+    width: 90%;
+  }
+
+  .header__logo {
+    width: 20%;
+  }
+
+  .header__links {
+    width: 80%;
+  }
+}
+
+/* max-width 640px, mobile-only styles, orientation: landscape */
+@media only screen and (max-width: 40em) and (orientation: landscape) {
+  .header {
+    font-size: 0.8em;
+  }
+  .header__wrapper {
+    width: 90%;
+  }
+
+  .header__logo {
+    width: 20%;
+  }
+
+  .header__links {
+    width: 80%;
+  }
+}
+
+/* Medium screens - TABLET */
+
+/* min-width 641px and max-width 1024px, orientation: portrait */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
+  .header__wrapper {
+    width: 90%;
+  }
+
+  .header__logo {
+    width: 20%;
+  }
+
+  .header__links {
+    width: 80%;
+  }
+}
+
+/* min-width 641px and max-width 1024px, orientation: landscape */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
+  .header__wrapper {
+    width: 90%;
+  }
+
+  .header__logo {
+    width: 20%;
+  }
+
+  .header__links {
+    width: 80%;
+  }
+}
+
+/* Large screens - DESKTOP */
+/* min-width 1025px, large screens */
+
+/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 89.9em) {
+  .header__wrapper {
+    width: 90%;
+  }
+
+  .header__logo {
+    width: 40%;
+  }
+
+  .header__links {
+    width: 50%;
+  }
+
+  .main {
+    font-size: 1.1em;
+  }
+}
+
+/* XLarge screens */
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+@media only screen and (min-width: 90em) and (max-width: 120em) {
+  .header__wrapper {
+    width: 80%;
+  }
+
+  .header__logo {
+    width: 40%;
+  }
+
+  .header__links {
+    width: 40%;
+  }
+
+  .main {
+    font-size: 1.2em;
+  }
+}
+
+/* XXLarge screens */
+/* min-width 1921px, xlarge screens */
+@media only screen and (min-width: 120.063em) {
+  .header__wrapper {
+    width: 80%;
+  }
+
+  .header__logo {
+    width: 40%;
+  }
+
+  .header__links {
+    width: 40%;
+  }
+
+  .main {
+    font-size: 1.2em;
+  }
+}
+
+/* iPad Pro Portrait */
+@media only screen and (device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (min__moz-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (min-device-pixel-ratio: 1.5) {
+  .header__wrapper {
+    width: 90%;
+  }
+
+  .header__logo {
+    width: 40%;
+  }
+
+  .header__links {
+    width: 60%;
+  }
+
+  .main {
+    font-size: 1.2em;
+  }
+}
+
+/* iPad Pro Landscape */
+@media only screen and (device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (min__moz-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (min-device-pixel-ratio: 1.5) {
+  .header__wrapper {
+    width: 90%;
+  }
+
+  .header__logo {
+    width: 40%;
+  }
+
+  .header__links {
+    width: 50%;
+  }
+
+  .main {
+    font-size: 1.2em;
+  }
+}
