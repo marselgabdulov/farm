@@ -9,6 +9,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'CeraPro';
+  src: url('../fonts/CeraPro/CeraPro-Regular.woff') format('woff'),
+    url('../fonts/CeraPro/CeraPro-Regular.eot') format('eot'),
+    url('../fonts/CeraPro/CeraPro-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   font-size: 100%;
@@ -100,7 +109,7 @@ h3 {
 }
 
 .header__wrapper {
-  height: 65px;
+  height: 75px;
   margin: auto;
   display: -webkit-flex;
   display: -ms-flex;
@@ -108,6 +117,7 @@ h3 {
   justify-content: space-between;
   -ms-align-items: center;
   align-items: center;
+  border-bottom: 1px solid black;
 }
 
 .header__links {

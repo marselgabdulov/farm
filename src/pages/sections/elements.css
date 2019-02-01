@@ -7,9 +7,6 @@
   z-index: 300;
   margin-right: 1em;
   position: absolute;
-  top: 80%;
-  left: 49%;
-  z-index: 2;
 }
 
 .arrow:hover {
@@ -17,7 +14,8 @@
 }
 
 .arrow path {
-  stroke: white;
+  /* stroke: #1e1f1f; */
+  stroke: #c8930a;
   fill: transparent;
   stroke-width: 3px;
   animation: arrow 2s infinite;
@@ -67,4 +65,94 @@
 .arrow path.a3 {
   animation-delay: 0s;
   -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+}
+
+/* Small screens - MOBILE */
+
+/* max-width 640px, mobile-only styles, orientation: portrait */
+@media only screen and (max-width: 40em) and (orientation: portrait) {
+  .arrow {
+    top: 85%;
+    right: calc(50% - 30px);
+  }
+}
+
+/* max-width 640px, mobile-only styles, orientation: landscape */
+@media only screen and (max-width: 40em) and (orientation: landscape) {
+  .arrow {
+    top: 85%;
+    right: calc(50% - 30px);
+  }
+}
+
+/* Medium screens - TABLET */
+
+/* min-width 641px and max-width 1024px, orientation: portrait */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
+  .arrow {
+    top: 85%;
+    right: calc(50% - 30px);
+  }
+}
+
+/* min-width 641px and max-width 1024px, orientation: landscape */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
+  .arrow {
+    top: 75%;
+    right: calc(50% - 30px);
+  }
+}
+
+/* Large screens - DESKTOP */
+/* min-width 1025px, large screens */
+
+/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  .arrow {
+    top: 78%;
+    right: 10%;
+  }
+}
+
+/* XLarge screens */
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+@media only screen and (min-width: 90em) and (max-width: 120em) {
+  .arrow {
+    top: 78%;
+    right: 10%;
+  }
+}
+
+/* XXLarge screens */
+/* min-width 1921px, xlarge screens */
+@media only screen and (min-width: 120.063em) {
+  .arrow {
+    width: 30px;
+    max-height: 40px;
+    top: 75%;
+    right: 10%;
+  }
+}
+
+/* iPad Pro Portrait */
+@media only screen and (device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (min__moz-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (min-device-pixel-ratio: 1.5) {
+  .arrow {
+    top: 85%;
+    right: calc(50% - 30px);
+  }
+}
+
+/* iPad Pro Landscape */
+@media only screen and (device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (min__moz-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (min-device-pixel-ratio: 1.5) {
+  .arrow {
+    top: 75%;
+    right: 5%;
+  }
 }

@@ -1,128 +1,129 @@
 .intro {
   position: relative;
   width: 100%;
-  margin-top: 65px;
-  height: calc(100vh - 65px);
 }
 
-.intro__background {
-  width: 100%;
-  height: calc(100vh - 65px);
+.intro__bg {
+  position: absolute;
+  /* background-color: #e7e9e1; */
+  background-color: rgb(224, 237, 240);
+  z-index: -1;
+}
+
+.intro__image {
+  overflow: hidden;
   -webkit-background-size: cover;
   background-size: cover;
-  z-index: -1;
-  opacity: 0.9;
+  -webkit-animation: 0.5s image-fade-in linear;
+  animation: 0.5s image-fade-in linear;
 }
 
 .intro__text {
   position: absolute;
-  width: 98%;
-  height: 98%;
-  top: 1%;
-  left: 1%;
-  bottom: 1%;
-  right: 1%;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  -ms-align-items: center;
-  align-items: center;
-  z-index: 1;
-  /* text-shadow: 2px 0 0 grey; */
-}
-
-.intro__wrapper {
-  position: absolute;
-}
-
-.intro__title {
-  margin-top: -2%;
-  font-size: 4em;
-  text-align: center;
-}
-
-.intro__subtitle {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.intro__subtitle span {
-  display: inline-block;
-  position: relative;
-}
-
-.intro__subtitle span:before,
-.intro__subtitle span:after {
-  content: '';
-  position: absolute;
-  height: 5px;
-  border-bottom: 2px solid white;
-  border-top: 2px solid white;
-  top: 12px;
-}
-
-.intro__subtitle span:before {
-  right: 100%;
-  margin-right: 15px;
-}
-.intro__subtitle span:after {
-  left: 100%;
-  margin-left: 15px;
+  color: #1e1f1f;
+  background-color: rgba(224, 237, 240, 0.5);
 }
 
 /* Small screens - MOBILE */
 
 /* max-width 640px, mobile-only styles, orientation: portrait */
 @media only screen and (max-width: 40em) and (orientation: portrait) {
-  .intro__wrapper {
-    top: 0%;
+  .intro {
+    width: 100%;
+    margin-top: 65px;
+    height: calc(100vh - 65px);
+  }
+
+  .intro__bg {
+    top: 5%;
     left: 5%;
     width: 90%;
+    height: 90%;
+  }
+
+  .intro__image {
+    width: 80%;
     height: 80%;
-    text-shadow: 1px 0 0 #000;
+    margin-top: 15%;
+    margin-left: 10%;
+  }
+
+  @keyframes image-fade-in {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 80%;
+      opacity: 1;
+    }
+  }
+
+  .intro__text {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    top: 40%;
+    color: white;
+    background-color: rgba(224, 237, 240, 0);
   }
 
   .intro__title {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   .intro__subtitle {
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  .intro__subtitle span:before,
-  .intro__subtitle span:after {
-    display: none;
+    font-size: 0.95em;
+    font-weight: bold;
   }
 }
 
 /* max-width 640px, mobile-only styles, orientation: landscape */
 @media only screen and (max-width: 40em) and (orientation: landscape) {
-  .intro__wrapper {
-    top: 10%;
+  .intro {
+    width: 100%;
+    margin-top: 65px;
+    height: calc(100vh - 65px);
+  }
+
+  .intro__bg {
+    top: 5%;
     left: 5%;
     width: 90%;
-    height: 80%;
-    text-shadow: 1px 0 0 #000;
+    height: 90%;
+  }
+
+  .intro__image {
+    width: 86%;
+    height: 75%;
+    margin-top: 5%;
+    margin-left: 7%;
+  }
+
+  @keyframes image-fade-in {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 80%;
+      opacity: 1;
+    }
+  }
+
+  .intro__text {
+    top: 35%;
+    left: 10%;
+    color: white;
   }
 
   .intro__title {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   .intro__subtitle {
-    font-size: 1.4em;
-  }
-
-  .intro__subtitle span:before,
-  .intro__subtitle span:after {
-    display: none;
+    font-size: 1em;
+    font-weight: bold;
   }
 }
 
@@ -130,109 +131,44 @@
 
 /* min-width 641px and max-width 1024px, orientation: portrait */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
-  .intro__wrapper {
-    top: 10%;
+  .intro {
+    width: 100%;
+    margin-top: 65px;
+    height: calc(100vh - 65px);
+  }
+
+  .intro__bg {
+    top: 5%;
     left: 5%;
     width: 90%;
-    height: 80%;
+    height: 90%;
   }
 
-  .intro__title {
-    font-size: 3.8em;
+  .intro__image {
+    width: 70%;
+    height: 55%;
+    margin-top: 25%;
+    margin-left: 15%;
   }
 
-  .intro__subtitle {
-    font-size: 1.1em;
+  @keyframes image-fade-in {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 70%;
+      opacity: 1;
+    }
   }
 
-  .intro__subtitle span:before,
-  .intro__subtitle span:after {
-    width: 100px;
-  }
-}
-
-/* min-width 641px and max-width 1024px, orientation: landscape */
-@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
-  .intro__wrapper {
-    top: 10%;
-    left: 5%;
-    width: 90%;
-    height: 80%;
-    text-shadow: 1px 0 0 #000;
-  }
-
-  .intro__title {
-    font-size: 3em;
-  }
-
-  .intro__subtitle {
-    font-size: 1.4em;
-  }
-
-  .intro__subtitle span:before,
-  .intro__subtitle span:after {
-    display: none;
-  }
-}
-
-/* Large screens - DESKTOP */
-/* min-width 1025px, large screens */
-
-/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
-  .intro__wrapper {
-    top: 10%;
-    left: 5%;
-    width: 90%;
-    height: 80%;
-  }
-
-  .intro__title {
-    font-size: 3.5em;
-  }
-
-  .intro__subtitle {
-    font-size: 1.2em;
-  }
-
-  .intro__subtitle span:before,
-  .intro__subtitle span:after {
-    width: 200px;
-  }
-}
-
-/* XLarge screens */
-
-/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
-@media only screen and (min-width: 90em) and (max-width: 120em) {
-  .intro__wrapper {
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
-  }
-
-  .intro__title {
-    font-size: 3.5em;
-  }
-
-  .intro__subtitle {
-    font-size: 1.2em;
-  }
-  .intro__subtitle span:before,
-  .intro__subtitle span:after {
-    width: 200px;
-  }
-}
-
-/* XXLarge screens */
-/* min-width 1921px, xlarge screens */
-@media only screen and (min-width: 120.063em) {
-  .intro__wrapper {
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
+  .intro__text {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    top: 40%;
+    color: white;
+    background-color: rgba(224, 237, 240, 0);
   }
 
   .intro__title {
@@ -242,10 +178,196 @@
   .intro__subtitle {
     font-size: 1.8em;
   }
+}
 
-  .intro__subtitle span:before,
-  .intro__subtitle span:after {
-    width: 200px;
+/* min-width 641px and max-width 1024px, orientation: landscape */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
+  .intro {
+    width: 100%;
+    margin-top: 100px;
+    height: calc(100vh - 65px);
+  }
+
+  .intro__bg {
+    top: 5%;
+    left: 35%;
+    width: 60%;
+    height: 75%;
+  }
+
+  .intro__image {
+    width: 70%;
+    height: 55%;
+    margin-top: 10%;
+    margin-left: 15%;
+  }
+
+  @keyframes image-fade-in {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 70%;
+      opacity: 1;
+    }
+  }
+
+  .intro__text {
+    top: 30%;
+    left: 5%;
+  }
+
+  .intro__title {
+    font-size: 4em;
+  }
+
+  .intro__subtitle {
+    font-size: 2.1em;
+  }
+}
+
+/* Large screens - DESKTOP */
+/* min-width 1025px, large screens */
+
+/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  .intro {
+    margin-top: 100px;
+    height: calc(100vh - 65px);
+  }
+
+  .intro__bg {
+    top: 5%;
+    left: 35%;
+    width: 60%;
+    height: 75%;
+  }
+
+  .intro__image {
+    width: 70%;
+    height: 55%;
+    margin-top: 8.5%;
+    margin-left: 15%;
+  }
+
+  @keyframes image-fade-in {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 70%;
+      opacity: 1;
+    }
+  }
+
+  .intro__text {
+    top: 30%;
+    left: 5%;
+  }
+
+  .intro__title {
+    font-size: 4.5em;
+  }
+
+  .intro__subtitle {
+    font-size: 2.5em;
+  }
+}
+
+/* XLarge screens */
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+@media only screen and (min-width: 90em) and (max-width: 120em) {
+  .intro {
+    margin-top: 100px;
+    height: calc(100vh - 65px);
+  }
+
+  .intro__bg {
+    top: 5%;
+    left: 35%;
+    width: 55%;
+    height: 75%;
+  }
+
+  .intro__image {
+    width: 60%;
+    height: 55%;
+    margin-top: 7%;
+    margin-left: 20%;
+  }
+
+  @keyframes image-fade-in {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 60%;
+      opacity: 1;
+    }
+  }
+
+  .intro__text {
+    top: 32%;
+    left: 10%;
+  }
+
+  .intro__title {
+    font-size: 4.5em;
+  }
+
+  .intro__subtitle {
+    font-size: 2.5em;
+  }
+}
+
+/* XXLarge screens */
+/* min-width 1921px, xlarge screens */
+@media only screen and (min-width: 120.063em) {
+  .intro {
+    margin-top: 100px;
+    height: calc(100vh - 65px);
+  }
+
+  .intro__bg {
+    top: 5%;
+    left: 35%;
+    width: 55%;
+    height: 75%;
+  }
+
+  .intro__image {
+    width: 60%;
+    height: 55%;
+    margin-top: 7%;
+    margin-left: 20%;
+  }
+
+  @keyframes image-fade-in {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 60%;
+      opacity: 1;
+    }
+  }
+
+  .intro__text {
+    top: 32%;
+    left: 10%;
+  }
+
+  .intro__title {
+    font-size: 4.5em;
+  }
+
+  .intro__subtitle {
+    font-size: 2.5em;
   }
 }
 
@@ -254,19 +376,52 @@
   only screen and (device-width: 1024px) and (orientation: portrait) and (-o-min-device-pixel-ratio: 3/2),
   only screen and (device-width: 1024px) and (orientation: portrait) and (min__moz-device-pixel-ratio: 1.5),
   only screen and (device-width: 1024px) and (orientation: portrait) and (min-device-pixel-ratio: 1.5) {
-  .intro__wrapper {
-    top: 10%;
+  .intro {
+    width: 100%;
+    margin-top: 65px;
+    height: calc(100vh - 65px);
+  }
+
+  .intro__bg {
+    top: 5%;
     left: 5%;
     width: 90%;
-    height: 80%;
+    height: 90%;
+  }
+
+  .intro__image {
+    width: 70%;
+    height: 55%;
+    margin-top: 25%;
+    margin-left: 15%;
+  }
+
+  @keyframes image-fade-in {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 70%;
+      opacity: 1;
+    }
+  }
+
+  .intro__text {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    top: 40%;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
   }
 
   .intro__title {
-    font-size: 3.8em;
+    font-size: 4.5em;
   }
 
   .intro__subtitle {
-    font-size: 1.1em;
+    font-size: 2em;
   }
 }
 
@@ -275,18 +430,47 @@
   only screen and (device-width: 1366px) and (orientation: landscape) and (-o-min-device-pixel-ratio: 3/2),
   only screen and (device-width: 1366px) and (orientation: landscape) and (min__moz-device-pixel-ratio: 1.5),
   only screen and (device-width: 1366px) and (orientation: landscape) and (min-device-pixel-ratio: 1.5) {
-  .intro__wrapper {
-    top: 10%;
+  .intro {
+    width: 100%;
+    margin-top: 100px;
+    height: calc(100vh - 65px);
+  }
+
+  .intro__bg {
+    top: 5%;
+    left: 35%;
+    width: 60%;
+    height: 75%;
+  }
+
+  .intro__image {
+    width: 70%;
+    height: 55%;
+    margin-top: 10%;
+    margin-left: 15%;
+  }
+
+  @keyframes image-fade-in {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 70%;
+      opacity: 1;
+    }
+  }
+
+  .intro__text {
+    top: 30%;
     left: 5%;
-    width: 90%;
-    height: 80%;
   }
 
   .intro__title {
-    font-size: 3.5em;
+    font-size: 4.5em;
   }
 
   .intro__subtitle {
-    font-size: 1.2em;
+    font-size: 2.5em;
   }
 }

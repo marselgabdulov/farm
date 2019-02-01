@@ -1,5 +1,6 @@
 import React from 'react'
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
@@ -7,6 +8,10 @@ import SEO from '../components/seo'
 import './index.css'
 
 class IndexPage extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+    AOS.init()
+  }
   scrollTo = element => {
     window.scroll({
       behavior: 'smooth',
@@ -20,7 +25,13 @@ class IndexPage extends React.Component {
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <div className="header">
-          <div className="header__wrapper">
+          <div
+            className="header__wrapper"
+            data-aos="fade"
+            data-aos-delay="250"
+            data-aos-duration="1200"
+            data-aos-once="true"
+          >
             <div className="header__logo">
               <button
                 className="header__button"
@@ -75,22 +86,33 @@ class IndexPage extends React.Component {
             }}
           >
             <div
-              className="intro__background"
+              className="intro__bg"
+              data-aos="fade"
+              data-aos-delay="250"
+              data-aos-duration="1200"
+              data-aos-once="true"
+            />
+            <div
+              className="intro__image"
               style={{
                 backgroundImage: `url(${
                   this.props.data.farm.childImageSharp.fluid.src
                 })`,
               }}
             />
-
-            <div className="intro__wrapper">
-              <div className="intro__text">
-                <h1 className="intro__title">Позняки</h1>
-                <span className="intro__subtitle">
-                  <span>Ферма в Ставропольском крае</span>
-                </span>
-              </div>
+            <div
+              className="intro__text"
+              data-aos="fade"
+              data-aos-delay="250"
+              data-aos-duration="1200"
+              data-aos-once="true"
+            >
+              <h1 className="intro__title">Позняки</h1>
+              <span className="intro__subtitle">
+                Ферма в Ставропольском крае
+              </span>
             </div>
+
             <svg
               className="arrow"
               onClick={() => this.scrollTo(document.getElementById('about'))}
@@ -101,7 +123,7 @@ class IndexPage extends React.Component {
             </svg>
           </section>
 
-          <div className="page__wrapper">
+          {/* <div className="page__wrapper">
             <section
               className="about"
               id="about"
@@ -315,7 +337,7 @@ class IndexPage extends React.Component {
                 </form>
               </div>
             </section>
-          </div>
+          </div> */}
         </div>
       </Layout>
     )
@@ -334,7 +356,7 @@ export const fluidImage = graphql`
 
 export const pageQuery = graphql`
   query {
-    farm: file(relativePath: { eq: "farm2.jpg" }) {
+    farm: file(relativePath: { eq: "farm3.jpg" }) {
       ...fluidImage
     }
     pigs: file(relativePath: { eq: "pigs.jpg" }) {
