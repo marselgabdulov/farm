@@ -1,28 +1,19 @@
 /*--------ABOUT--------*/
 .about {
-  margin: 5% auto;
-}
-
-.about__wrapper {
+  margin: 0 auto 5% auto;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  width: 100%;
-
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .about__title {
   text-align: center;
-}
-
-.about__quote {
-  width: 45%;
-  font-size: 1.75em;
-  margin-top: 0.5em;
 }
 
 .about__text {
@@ -41,10 +32,6 @@
     text-align: left;
   }
 
-  .about__quote {
-    display: none;
-  }
-
   .about__text {
     width: 100%;
   }
@@ -60,10 +47,6 @@
     text-align: left;
   }
 
-  .about__quote {
-    display: none;
-  }
-
   .about__text {
     width: 100%;
   }
@@ -73,32 +56,41 @@
 
 /* min-width 641px and max-width 1024px, orientation: portrait */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
-  .about__title {
-    text-align: left;
-    margin-bottom: 0;
+  .about {
+    margin: 5% auto;
+    height: auto;
+    font-size: 1.2em;
   }
 
-  .about__quote {
-    display: none;
+  .about__title {
+    margin-bottom: 0.5em;
+    padding-bottom: 0;
   }
 
   .about__text {
+    text-align: justify;
     width: 100%;
+    margin: auto;
   }
 }
 
 /* min-width 641px and max-width 1024px, orientation: landscape */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
   .about {
-    padding-top: 2em;
+    margin: 5% auto;
+    height: auto;
+    font-size: 1.2em;
   }
 
-  .about__quote {
-    display: none;
+  .about__title {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
   }
 
   .about__text {
+    text-align: justify;
     width: 100%;
+    margin: auto;
   }
 }
 
@@ -108,17 +100,20 @@
 /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
   .about {
-    padding-top: 2em;
+    margin: 0 auto 5% auto;
+    height: 75vh;
+    font-size: 1.2em;
   }
 
-  .about__quote {
-    width: 42%;
-    font-size: 1.1em;
+  .about__title {
+    margin-bottom: 0.5em;
     margin-top: 1em;
   }
 
   .about__text {
-    width: 56%;
+    text-align: justify;
+    width: 70%;
+    margin: auto;
   }
 }
 
@@ -127,22 +122,20 @@
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
   .about {
-    padding-top: 2em;
+    margin: 0 auto 5% auto;
+    height: 75vh;
+    font-size: 1.2em;
   }
 
   .about__title {
     margin-bottom: 0.5em;
-    padding-bottom: 0;
-  }
-
-  .about__quote {
-    width: 42%;
-    font-size: 1.1em;
     margin-top: 1em;
   }
 
   .about__text {
-    width: 55%;
+    text-align: justify;
+    width: 60%;
+    margin: auto;
   }
 }
 
@@ -155,12 +148,6 @@
 
   .about__title {
     margin-bottom: 0.5em;
-    padding-bottom: 0;
-  }
-
-  .about__quote {
-    width: 42%;
-    font-size: 1.1em;
     margin-top: 1em;
   }
 
@@ -174,16 +161,21 @@
   only screen and (device-width: 1024px) and (orientation: portrait) and (-o-min-device-pixel-ratio: 3/2),
   only screen and (device-width: 1024px) and (orientation: portrait) and (min__moz-device-pixel-ratio: 1.5),
   only screen and (device-width: 1024px) and (orientation: portrait) and (min-device-pixel-ratio: 1.5) {
-  .about__title {
-    text-align: left;
+  .about {
+    margin: 0 auto 5% auto;
+    height: 60vh;
+    font-size: 1.2em;
   }
 
-  .about__quote {
-    display: none;
+  .about__title {
+    margin-bottom: 0.5em;
+    margin-top: 1em;
   }
 
   .about__text {
+    text-align: justify;
     width: 100%;
+    margin: auto;
   }
 }
 
@@ -192,17 +184,20 @@
   only screen and (device-width: 1366px) and (orientation: landscape) and (-o-min-device-pixel-ratio: 3/2),
   only screen and (device-width: 1366px) and (orientation: landscape) and (min__moz-device-pixel-ratio: 1.5),
   only screen and (device-width: 1366px) and (orientation: landscape) and (min-device-pixel-ratio: 1.5) {
-  .about__title {
-    text-align: center;
+  .about {
+    margin: 0 auto 5% auto;
+    height: auto;
+    font-size: 1.2em;
   }
 
-  .about__quote {
-    width: 42%;
-    font-size: 1.1em;
+  .about__title {
+    margin-bottom: 0.5em;
     margin-top: 1em;
   }
 
   .about__text {
-    width: 56%;
+    text-align: justify;
+    width: 80%;
+    margin: auto;
   }
 }

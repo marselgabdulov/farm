@@ -1,7 +1,7 @@
 import React from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Layout from '../components/layout'
+import ReactFullpage from '@fullpage/react-fullpage'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 
@@ -123,19 +123,20 @@ class IndexPage extends React.Component {
             </svg>
           </section>
 
-          {/* <div className="page__wrapper">
+          <div className="page__wrapper">
             <section
               className="about"
               id="about"
               ref={section => {
                 this.about = section
               }}
+              data-aos="fade"
+              data-aos-delay="250"
+              data-aos-duration="1200"
+              data-aos-once="false"
             >
               <h2 className="about__title">О нас</h2>
               <div className="about__wrapper">
-                <h3 className="about__quote">
-                  <i>&laquo;Позняки&raquo; &ndash; просто очень вкусно.</i>
-                </h3>
                 <div className="about__text">
                   <p>
                     "Позняки" &ndash; небольшая ферма, предлагающая
@@ -337,7 +338,7 @@ class IndexPage extends React.Component {
                 </form>
               </div>
             </section>
-          </div> */}
+          </div>
         </div>
       </Layout>
     )
