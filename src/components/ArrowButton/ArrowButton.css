@@ -20,8 +20,8 @@
 
 .arrow path,
 .arrow__intro path {
-  /* stroke: #1e1f1f; */
-  stroke: #c8930a;
+  stroke: #1e1f1f;
+  /* stroke: #c8930a; */
   fill: transparent;
   stroke-width: 2px;
   animation: arrow 2s infinite;

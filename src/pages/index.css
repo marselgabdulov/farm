@@ -3,7 +3,6 @@
 @import './sections/products.css';
 @import './sections/media.css';
 @import './sections/contacts.css';
-@import './sections/elements.css';
 
 .page__wrapper {
   width: 80%;

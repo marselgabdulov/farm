@@ -1,9 +1,12 @@
 import React from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import ReactFullpage from '@fullpage/react-fullpage'
 import { graphql } from 'gatsby'
+import Layout from '../components/layout'
 import SEO from '../components/seo'
+import ProductCard from '../components/ProductCard/ProductCard'
+import ArrowButton from '../components/ArrowButton/ArrowButton'
+import { meat, chicken, eggs } from '../data/products.js'
 
 import './index.css'
 
@@ -16,7 +19,7 @@ class IndexPage extends React.Component {
     window.scroll({
       behavior: 'smooth',
       left: 0,
-      top: element.offsetTop - 70,
+      top: element.offsetTop - 100,
     })
   }
 
@@ -112,15 +115,7 @@ class IndexPage extends React.Component {
                 Ферма в Ставропольском крае
               </span>
             </div>
-
-            <svg
-              className="arrow"
-              onClick={() => this.scrollTo(document.getElementById('about'))}
-            >
-              <path className="a1" d="M0 0 L15 16 L30 0" />
-              <path className="a2" d="M0 10 L15 26 L30 10" />
-              <path className="a3" d="M0 20 L15 36 L30 20" />
-            </svg>
+            <ArrowButton scrollTo="about" name="arrow__intro" />
           </section>
 
           <div className="page__wrapper">
@@ -131,9 +126,9 @@ class IndexPage extends React.Component {
                 this.about = section
               }}
               data-aos="fade"
-              data-aos-delay="250"
+              data-aos-delay="100"
               data-aos-duration="1200"
-              data-aos-once="false"
+              data-aos-once="true"
             >
               <h2 className="about__title">О нас</h2>
               <div className="about__wrapper">
@@ -154,95 +149,19 @@ class IndexPage extends React.Component {
                     каждые две недели.
                   </p>
                 </div>
+                <ArrowButton scrollTo="products" name="arrow" />
               </div>
             </section>
 
             <section id="products" className="products">
               <h2 className="products__title">Наша продукция</h2>
-              <div className="product">
-                <div
-                  className="product__image"
-                  style={{
-                    backgroundImage: `url(${
-                      this.props.data.pigs.childImageSharp.fluid.src
-                    })`,
-                  }}
-                />
-                <div className="product__description">
-                  <h3 className="product__title">Свинина.</h3>
-                  <span>
-                    Мякоть - <b>425</b> рублей за 0.5кг.
-                  </span>
-                  <span>
-                    Мякоть на косточке - <b>375</b> рублей за 0.5кг.
-                  </span>
-                  <span>
-                    Рулька - <b>200</b> рублей за 1кг.
-                  </span>
-                  <span>
-                    Грудинка - <b>200</b> рублей за 0.5кг.
-                  </span>
-                  <span>
-                    Ребрышки - <b>399</b> рублей за 1кг.
-                  </span>
-                  <span>
-                    Рагу - <b>118</b> рублей за 1кг.
-                  </span>
-                  <span>
-                    Ножки - <b>24</b> рубля за 0.8кг.
-                  </span>
-                  <span>
-                    Фарш домашний - <b>365</b> рублей за 0.5кг.
-                  </span>
-                </div>
-              </div>
+              <div className="product__cards">
+                <ProductCard productTitle="Свинина" description={meat} />
+                <ProductCard productTitle="Курица" description={chicken} />
 
-              <div className="product">
-                <div className="product__description--left">
-                  <h3 className="product__title">Курица.</h3>
-                  <span>
-                    Цыпленок корнишон - <b>230</b> рублей за штуку.
-                  </span>
-                  <span>
-                    Подрощенный цыпленок - <b>330</b> рублей за штуку.
-                  </span>
-                  <span>
-                    Курица для жарки - <b>300</b> рублей за штуку.
-                  </span>
-                  <span>
-                    Суповая курица - <b>400</b> рублей за штуку.
-                  </span>
-                  <span>
-                    Петух - <b>420</b> рублей за штуку.
-                  </span>
-                </div>
-
-                <div
-                  className="product__image"
-                  style={{
-                    backgroundImage: `url(${
-                      this.props.data.chicken.childImageSharp.fluid.src
-                    })`,
-                  }}
-                />
+                <ProductCard productTitle="Яйца" description={eggs} />
               </div>
-              <div className="product">
-                <div
-                  className="product__image"
-                  style={{
-                    backgroundImage: `url(${
-                      this.props.data.eggs.childImageSharp.fluid.src
-                    })`,
-                  }}
-                />
-                <div className="product__description">
-                  <h3 className="product__title">Яйца.</h3>
-                  <span>
-                    Куриные яйца - <b>150</b> рублей за десяток.
-                  </span>
-                  <span>Могут быть грязными. Перед продажей не моем.</span>
-                </div>
-              </div>
+              <ArrowButton scrollTo="media" name="arrow" />
             </section>
 
             <section
@@ -288,6 +207,7 @@ class IndexPage extends React.Component {
                   </a>
                 </div>
               </div>
+              <ArrowButton scrollTo="contacts" name="arrow" />
             </section>
 
             <section
@@ -358,15 +278,6 @@ export const fluidImage = graphql`
 export const pageQuery = graphql`
   query {
     farm: file(relativePath: { eq: "farm3.jpg" }) {
-      ...fluidImage
-    }
-    pigs: file(relativePath: { eq: "pigs.jpg" }) {
-      ...fluidImage
-    }
-    chicken: file(relativePath: { eq: "chicken.jpg" }) {
-      ...fluidImage
-    }
-    eggs: file(relativePath: { eq: "eggs.jpg" }) {
       ...fluidImage
     }
     pigs_youtube: file(relativePath: { eq: "pigs_youtube.jpg" }) {

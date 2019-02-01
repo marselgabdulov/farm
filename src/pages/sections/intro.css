@@ -16,6 +16,11 @@
   background-size: cover;
   -webkit-animation: 0.5s image-fade-in linear;
   animation: 0.5s image-fade-in linear;
+  transition: all 0.7s ease-in-out;
+}
+
+.intro__image:hover {
+  transform: scale(1.1);
 }
 
 .intro__text {
@@ -280,9 +285,9 @@
 
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 @media only screen and (min-width: 90em) and (max-width: 120em) {
-  .intro {
+  section.intro {
     margin-top: 100px;
-    height: calc(100vh - 65px);
+    height: calc(100vh - 100px);
   }
 
   .intro__bg {

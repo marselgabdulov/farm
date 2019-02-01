@@ -9,15 +9,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'CeraPro';
-  src: url('../fonts/CeraPro/CeraPro-Regular.woff') format('woff'),
-    url('../fonts/CeraPro/CeraPro-Regular.eot') format('eot'),
-    url('../fonts/CeraPro/CeraPro-Regular.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
 html,
 body {
   font-size: 100%;
@@ -101,11 +92,11 @@ h3 {
 /* --------HEADER------------*/
 .header {
   width: 100%;
-  position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 100;
   background-color: white;
+  position: fixed;
 }
 
 .header__wrapper {
