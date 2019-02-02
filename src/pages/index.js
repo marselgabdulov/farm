@@ -85,7 +85,7 @@ class IndexPage extends React.Component {
                 onClick={() => this.scrollTo(document.getElementById('media'))}
                 title="Соцсети"
               >
-                Медиа
+                Инстаграм
               </button>
               <button
                 className="header__button"
@@ -110,12 +110,16 @@ class IndexPage extends React.Component {
             <div
               className="intro__bg"
               data-aos="fade"
-              data-aos-delay="250"
+              data-aos-delay="100"
               data-aos-duration="1200"
               data-aos-once="true"
             />
             <div
               className="intro__image"
+              data-aos="fade"
+              data-aos-delay="300"
+              data-aos-duration="1200"
+              data-aos-once="true"
               style={{
                 backgroundImage: `url(${
                   this.props.data.farm.childImageSharp.fluid.src
@@ -125,7 +129,7 @@ class IndexPage extends React.Component {
             <div
               className="intro__text"
               data-aos="fade"
-              data-aos-delay="250"
+              data-aos-delay="500"
               data-aos-duration="1200"
               data-aos-once="true"
             >
@@ -193,6 +197,10 @@ class IndexPage extends React.Component {
             <section
               id="media"
               className="media"
+              data-aos="fade"
+              data-aos-delay="100"
+              data-aos-duration="1200"
+              data-aos-once="true"
               ref={section => {
                 this.media = section
               }}
@@ -203,6 +211,7 @@ class IndexPage extends React.Component {
                   href="https://www.instagram.com/from_the_farm_with_love/?hl=ru"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="@from_the_farm_with_love"
                 >
                   @from_the_farm_with_love
                 </a>
@@ -222,6 +231,10 @@ class IndexPage extends React.Component {
             <section
               id="contacts"
               className="contacts"
+              data-aos="fade"
+              data-aos-delay="100"
+              data-aos-duration="1200"
+              data-aos-once="true"
               ref={section => {
                 this.contacts = section
               }}

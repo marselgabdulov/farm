@@ -1,5 +1,14 @@
 @import '../normalize.css';
 
+/*----- Colors ------*/
+:root {
+  --blue-color: rgb(224, 237, 240);
+  --blue-transparent-color: rgba(224, 237, 240, 0.5);
+  --intro-text-color: #1e1f1f;
+  --link-blue-color: rgb(25, 90, 187);
+  --link-blue-hover-color: rgb(15, 58, 122);
+}
+
 @font-face {
   font-family: 'GothamPro';
   src: url('../fonts/GothamPro/GothamPro.woff') format('woff'),
@@ -61,6 +70,25 @@ h3 {
 
 .footer {
   flex-shrink: 0;
+  width: 100%;
+  background-color: var(--link-blue-color);
+  color: white;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer__wrapper {
+  width: 80%;
+  height: 100px;
+  margin: auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
 }
 
 @media (min-width: 43.75em) {
@@ -153,6 +181,14 @@ h3 {
   .header__links {
     width: 80%;
   }
+
+  .footer__wrapper {
+    width: 90%;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
 /* max-width 640px, mobile-only styles, orientation: landscape */
@@ -171,6 +207,10 @@ h3 {
   .header__links {
     width: 80%;
   }
+
+  .footer__wrapper {
+    width: 90%;
+  }
 }
 
 /* Medium screens - TABLET */
@@ -188,6 +228,10 @@ h3 {
   .header__links {
     width: 80%;
   }
+
+  .footer__wrapper {
+    width: 90%;
+  }
 }
 
 /* min-width 641px and max-width 1024px, orientation: landscape */
@@ -202,6 +246,9 @@ h3 {
 
   .header__links {
     width: 80%;
+  }
+  .footer__wrapper {
+    width: 90%;
   }
 }
 
@@ -225,6 +272,10 @@ h3 {
   .main {
     font-size: 1.1em;
   }
+
+  .footer__wrapper {
+    width: 90%;
+  }
 }
 
 /* XLarge screens */
@@ -246,6 +297,10 @@ h3 {
   .main {
     font-size: 1.2em;
   }
+
+  .footer__wrapper {
+    width: 80%;
+  }
 }
 
 /* XXLarge screens */
@@ -265,6 +320,10 @@ h3 {
 
   .main {
     font-size: 1.2em;
+  }
+
+  .footer__wrapper {
+    width: 80%;
   }
 }
 
@@ -288,6 +347,10 @@ h3 {
   .main {
     font-size: 1.2em;
   }
+
+  .footer__wrapper {
+    width: 90%;
+  }
 }
 
 /* iPad Pro Landscape */
@@ -309,5 +372,9 @@ h3 {
 
   .main {
     font-size: 1.2em;
+  }
+
+  .footer__wrapper {
+    width: 90%;
   }
 }

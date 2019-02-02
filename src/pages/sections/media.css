@@ -21,12 +21,12 @@
 }
 
 .media__main-link a {
-  color: rgb(15, 58, 122);
+  color: var(--link-blue-hover-color);
   text-align: center;
 }
 
 .media__main-link a:hover {
-  color: rgb(25, 90, 187);
+  color: var(--link-blue-color);
 }
 
 /* Small screens - MOBILE */

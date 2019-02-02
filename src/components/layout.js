@@ -19,12 +19,26 @@ const Layout = ({ children }) => (
       <>
         <div>
           {children}
-          {/* <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-            <div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-          </footer> */}
+          <footer className="footer">
+            <div className="footer__wrapper">
+              <div className="footer__author">
+                Разработано &nbsp;
+                <a
+                  href="https://marselgabdulov.github.io/personal/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="контакты разработчика"
+                >
+                  MG
+                </a>
+              </div>
+
+              <div className="footer__copy">
+                © {new Date().getFullYear()} &nbsp;
+                <a href="https://www.gatsbyjs.org">Gatsby</a>
+              </div>
+            </div>
+          </footer>
         </div>
       </>
     )}

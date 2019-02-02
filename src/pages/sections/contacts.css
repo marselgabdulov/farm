@@ -33,7 +33,7 @@ textarea {
   box-sizing: border-box;
   font-size: 1em;
   text-indent: 1em;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 ::-moz-placeholder {
@@ -50,7 +50,6 @@ textarea {
 }
 
 .form-button {
-  background-color: rgb(70, 168, 24);
   color: white;
   margin: 1em 0;
   border: none;
@@ -58,6 +57,7 @@ textarea {
   width: 100%;
   font-size: 1em;
   height: 3em;
+  background-color: var(--link-blue-color);
   opacity: 0.8;
 }
 
