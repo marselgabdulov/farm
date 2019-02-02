@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ProductCard from '../components/ProductCard/ProductCard'
+import InstagramCard from '../components/InstagramCard/InstagramCard'
 import ArrowButton from '../components/ArrowButton/ArrowButton'
 import { meat, chicken, eggs } from '../data/products.js'
 
@@ -24,9 +25,27 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    const instagram = [
+      {
+        url: 'https://www.instagram.com/angel_bar_grill/?hl=ru',
+        img: this.props.data.farm_instagram.childImageSharp.fluid.src,
+      },
+      {
+        url: 'https://www.instagram.com/p/Br-JhtlHC59/',
+        img: this.props.data.chicken_instagram.childImageSharp.fluid.src,
+      },
+      {
+        url: 'https://www.instagram.com/p/BsPx-oonHGk/',
+        img: this.props.data.view_instagram.childImageSharp.fluid.src,
+      },
+      {
+        url: 'https://www.instagram.com/p/BsNY__mntMs/',
+        img: this.props.data.pig_instagram.childImageSharp.fluid.src,
+      },
+    ]
     return (
       <Layout>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title="Ферма" keywords={[`ферма`, `свинина`, `курица`]} />
         <div className="header">
           <div
             className="header__wrapper"
@@ -153,7 +172,14 @@ class IndexPage extends React.Component {
               </div>
             </section>
 
-            <section id="products" className="products">
+            <section
+              id="products"
+              className="products"
+              data-aos="fade"
+              data-aos-delay="100"
+              data-aos-duration="1200"
+              data-aos-once="true"
+            >
               <h2 className="products__title">Наша продукция</h2>
               <div className="product__cards">
                 <ProductCard productTitle="Свинина" description={meat} />
@@ -171,44 +197,27 @@ class IndexPage extends React.Component {
                 this.media = section
               }}
             >
-              <h2 className="media__title">Мы в соцсетях</h2>
-              <div className="media__wrapper">
-                <div className="media__block">
-                  <a
-                    href="https://www.youtube.com/watch?v=q81w201PNUM"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="youtube"
-                    className="media__block--image-link"
-                    style={{
-                      backgroundImage: `url(${
-                        this.props.data.pigs_youtube.childImageSharp.fluid.src
-                      })`,
-                    }}
-                  >
-                    <h3 className="media__block--title">Youtube</h3>
-                  </a>
-                </div>
-                <div className="media__block">
-                  <a
-                    href="https://www.instagram.com/gorkiferma/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="instagram"
-                    className="media__block--image-link"
-                    style={{
-                      backgroundImage: `url(${
-                        this.props.data.chicken_instagram.childImageSharp.fluid
-                          .src
-                      })`,
-                    }}
-                  >
-                    <h3 className="media__block--title">Instagram</h3>
-                  </a>
-                </div>
+              <h2 className="media__title">Instagram</h2>
+              <span className="media__main-link">
+                <a
+                  href="https://www.instagram.com/from_the_farm_with_love/?hl=ru"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @from_the_farm_with_love
+                </a>
+              </span>
+              <div className="media__links">
+                {instagram.map(card => (
+                  <InstagramCard
+                    hreference={card.url}
+                    imageUrl={card.img}
+                    key={card.url}
+                  />
+                ))}
               </div>
-              <ArrowButton scrollTo="contacts" name="arrow" />
             </section>
+            <ArrowButton scrollTo="contacts" name="arrow" />
 
             <section
               id="contacts"
@@ -217,7 +226,7 @@ class IndexPage extends React.Component {
                 this.contacts = section
               }}
             >
-              <h2 className="contacts__title">Контаткы</h2>
+              <h2 className="contacts__title">Контакты</h2>
               <div className="contacts__wrapper">
                 <div className="contacts__info">
                   Заказывайте доставку продуктов <br />
@@ -235,7 +244,6 @@ class IndexPage extends React.Component {
                     name="name"
                     placeholder="Ваше имя"
                     required
-                    autoFocus
                   />
                   <input
                     className="input-email"
@@ -280,10 +288,16 @@ export const pageQuery = graphql`
     farm: file(relativePath: { eq: "farm3.jpg" }) {
       ...fluidImage
     }
-    pigs_youtube: file(relativePath: { eq: "pigs_youtube.jpg" }) {
+    farm_instagram: file(relativePath: { eq: "farm_instagram.jpg" }) {
       ...fluidImage
     }
     chicken_instagram: file(relativePath: { eq: "chicken_instagram.jpg" }) {
+      ...fluidImage
+    }
+    view_instagram: file(relativePath: { eq: "view_instagram.jpg" }) {
+      ...fluidImage
+    }
+    pig_instagram: file(relativePath: { eq: "pig2_instagram.jpg" }) {
       ...fluidImage
     }
   }
