@@ -6,17 +6,12 @@
 .intro__bg {
   position: absolute;
   background-color: var(--blue-color);
-  z-index: -1;
 }
 
 .intro__image {
   overflow: hidden;
   -webkit-background-size: cover;
   background-size: cover;
-}
-
-.intro__image:hover {
-  transform: scale(1.1);
 }
 
 .intro__text {

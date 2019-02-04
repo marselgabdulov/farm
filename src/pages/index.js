@@ -7,6 +7,7 @@ import SEO from '../components/seo'
 import ProductCard from '../components/ProductCard/ProductCard'
 import InstagramCard from '../components/InstagramCard/InstagramCard'
 import ArrowButton from '../components/ArrowButton/ArrowButton'
+import ContactForm from '../components/ContactForm/ContactForm'
 import { meat, chicken, eggs } from '../data/products.js'
 
 import './index.css'
@@ -246,37 +247,7 @@ class IndexPage extends React.Component {
                   через Whatsapp или Telegram <br />
                   +7 (985) 741-19-91
                 </div>
-                <form
-                  action="https://formspree.io/marsel.gabdulov@gmail.com"
-                  method="POST"
-                  className="request-form"
-                >
-                  <input
-                    className="input-name"
-                    type="text"
-                    name="name"
-                    placeholder="Ваше имя"
-                    required
-                  />
-                  <input
-                    className="input-email"
-                    type="email"
-                    name="email"
-                    placeholder="Ваш email"
-                    required
-                  />
-                  <textarea
-                    className="input-comment"
-                    type="text"
-                    name="comment"
-                    placeholder="Ваш комментарий"
-                  />
-                  <input
-                    type="submit"
-                    value="Отправить"
-                    className="form-button"
-                  />
-                </form>
+                <ContactForm />
               </div>
             </section>
           </div>
