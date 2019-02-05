@@ -2,19 +2,9 @@
 
 /*----- Colors ------*/
 :root {
-  --yellow2-color: #fce991;
   --some-green-color: #3a7160;
   --dark-green-color: #145a44;
-  --terracotta-color: #dd665a;
-  --dark-wine-color: #b85578;
-  --green-color: #4d9842;
-  --wine-color: #d7759d;
-  --purple-color: #b1aef7;
-  --light-purple-color: #8f8ce6;
-  --yellow-color: #f4dd69;
-  --blue-color: rgb(224, 237, 240);
-  --blue-transparent-color: rgba(224, 237, 240, 0.5);
-  --intro-text-color: #1e1f1f;
+
   --link-blue-color: rgb(25, 90, 187);
   --link-blue-hover-color: rgb(15, 58, 122);
 }
@@ -197,6 +187,7 @@ h3 {
   }
   .header__wrapper {
     width: 90%;
+    height: 70px;
   }
 
   .header__logo {
@@ -223,6 +214,7 @@ h3 {
   }
   .header__wrapper {
     width: 90%;
+    height: 70px;
   }
 
   .header__logo {
@@ -263,6 +255,7 @@ h3 {
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
   .header__wrapper {
     width: 90%;
+    height: 70px;
   }
 
   .header__logo {
