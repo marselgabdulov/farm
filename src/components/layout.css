@@ -2,6 +2,16 @@
 
 /*----- Colors ------*/
 :root {
+  --yellow2-color: #fce991;
+  --some-green-color: #3a7160;
+  --dark-green-color: #145a44;
+  --terracotta-color: #dd665a;
+  --dark-wine-color: #b85578;
+  --green-color: #4d9842;
+  --wine-color: #d7759d;
+  --purple-color: #b1aef7;
+  --light-purple-color: #8f8ce6;
+  --yellow-color: #f4dd69;
   --blue-color: rgb(224, 237, 240);
   --blue-transparent-color: rgba(224, 237, 240, 0.5);
   --intro-text-color: #1e1f1f;
@@ -10,10 +20,19 @@
 }
 
 @font-face {
-  font-family: 'GothamPro';
-  src: url('../fonts/GothamPro/GothamPro.woff') format('woff'),
-    url('../fonts/GothamPro/GothamPro.eot') format('eot'),
-    url('../fonts/GothamPro/GothamPro.ttf') format('ttf');
+  font-family: 'IBMPlexMono';
+  src: url('../fonts/IBMPlexMono/IBMPlexMono-Medium.woff') format('woff'),
+    url('../fonts/IBMPlexMono/IBMPlexMono-Medium.eot') format('eot'),
+    url('../fonts/IBMPlexMono/IBMPlexMono-Medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IntroRust';
+  src: url('../fonts/IntroRust/IntroRustG-Base.woff') format('woff'),
+    url('../fonts/IntroRust/IntroRustG-Base.eot') format('eot'),
+    url('../fonts/IntroRust/IntroRustG-Base.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
@@ -21,7 +40,7 @@
 html,
 body {
   font-size: 18px;
-  font-family: 'GothamPro';
+  font-family: 'IBMPlexMono';
 }
 
 body,
@@ -40,12 +59,16 @@ h1 {
   font-size: 2em;
   line-height: 1.25;
   margin-top: 0;
+  font-family: 'IntroRust';
+  background-color: transparent;
+  font-weight: normal;
 }
 
 h2 {
   font-size: 1.625em;
   line-height: 1.15384615;
   margin-top: 0.3em;
+  font-family: 'IntroRust';
 }
 
 h3 {
@@ -71,7 +94,7 @@ h3 {
 .footer {
   flex-shrink: 0;
   width: 100%;
-  background-color: var(--link-blue-color);
+  background-color: var(--dark-green-color);
   color: white;
 }
 
@@ -123,12 +146,12 @@ h3 {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: white;
   position: fixed;
+  background-color: var(--some-green-color);
 }
 
 .header__wrapper {
-  height: 75px;
+  height: 100px;
   margin: auto;
   display: -webkit-flex;
   display: -ms-flex;
@@ -136,7 +159,6 @@ h3 {
   justify-content: space-between;
   -ms-align-items: center;
   align-items: center;
-  border-bottom: 1px solid black;
 }
 
 .header__links {
@@ -147,15 +169,18 @@ h3 {
 }
 
 .header__button {
-  background-color: white;
+  background-color: var(--some-green-color);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold !important;
+  font-size: 1em !important;
   padding: 0 !important;
   height: auto;
-  color: rgb(55, 53, 53);
   border: none;
   font: inherit;
   cursor: pointer;
-
   font-size: 1.2em;
+  font-weight: medium;
   outline: none;
 }
 

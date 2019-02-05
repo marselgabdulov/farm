@@ -6,9 +6,8 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ProductCard from '../components/ProductCard/ProductCard'
 import InstagramCard from '../components/InstagramCard/InstagramCard'
-import ArrowButton from '../components/ArrowButton/ArrowButton'
 import ContactForm from '../components/ContactForm/ContactForm'
-import { meat, chicken, eggs } from '../data/products.js'
+import { meat, chicken } from '../data/products.js'
 
 import './index.css'
 
@@ -21,7 +20,7 @@ class IndexPage extends React.Component {
     window.scroll({
       behavior: 'smooth',
       left: 0,
-      top: element.offsetTop - 100,
+      top: element.offsetTop - 75,
     })
   }
 
@@ -109,16 +108,9 @@ class IndexPage extends React.Component {
             }}
           >
             <div
-              className="intro__bg"
-              data-aos="fade"
-              data-aos-delay="100"
-              data-aos-duration="1200"
-              data-aos-once="true"
-            />
-            <div
               className="intro__image"
               data-aos="fade"
-              data-aos-delay="300"
+              data-aos-delay="200"
               data-aos-duration="1200"
               data-aos-once="true"
               style={{
@@ -133,79 +125,91 @@ class IndexPage extends React.Component {
               data-aos-delay="500"
               data-aos-duration="1200"
               data-aos-once="true"
+              onClick={() => this.scrollTo(document.getElementById('about'))}
             >
               <h1 className="intro__title">Позняки</h1>
               <span className="intro__subtitle">
                 Ферма в Ставропольском крае
               </span>
             </div>
-            <ArrowButton scrollTo="about" name="arrow__intro" />
+          </section>
+          <section
+            className="about"
+            id="about"
+            ref={section => {
+              this.about = section
+            }}
+            data-aos="fade"
+            data-aos-delay="100"
+            data-aos-duration="1200"
+            data-aos-once="true"
+          >
+            <div className="about__wrapper">
+              <div
+                className="about__image"
+                data-aos="fade"
+                data-aos-delay="200"
+                data-aos-duration="1200"
+                data-aos-once="true"
+              >
+                <img
+                  src={this.props.data.pig_about.childImageSharp.fluid.src}
+                  alt="pig"
+                  onClick={() =>
+                    this.scrollTo(document.getElementById('intro'))
+                  }
+                />
+              </div>
+              <div className="about__text">
+                <h2 className="about__title">О нас</h2>
+                <p>
+                  "Позняки" &ndash; небольшая ферма, предлагающая
+                  высококачественную, экологически чистую и ответсвенно
+                  выращенную продукцию из свинины, курицы и яиц.
+                </p>
+                <p>
+                  Наши животные обитают в условиях, максимально приближенных к
+                  природным. Мы не используем антибиотики и гормоны роста, что
+                  делает наши продукты гипоаллергенными и безопасными.
+                </p>
+                <p>
+                  Хотя наша ферма и находится в самом сердце Ставропольского
+                  края, мы осуществляем доставку продуктов в столичный регион
+                  каждые две недели.
+                </p>
+              </div>
+            </div>
           </section>
 
-          <div className="page__wrapper">
-            <section
-              className="about"
-              id="about"
-              ref={section => {
-                this.about = section
-              }}
-              data-aos="fade"
-              data-aos-delay="100"
-              data-aos-duration="1200"
-              data-aos-once="true"
-            >
-              <h2 className="about__title">О нас</h2>
-              <div className="about__wrapper">
-                <div className="about__text">
-                  <p>
-                    "Позняки" &ndash; небольшая ферма, предлагающая
-                    высококачественную, экологически чистую и ответсвенно
-                    выращенную продукцию из свинины, курицы и яиц.
-                  </p>
-                  <p>
-                    Наши животные обитают в условиях, максимально приближенных к
-                    природным. Мы не используем антибиотики и гормоны роста, что
-                    делает наши продукты гипоаллергенными и безопасными.
-                  </p>
-                  <p>
-                    Хотя наша ферма и находится в самом сердце Ставропольского
-                    края, мы осуществляем доставку продуктов в столичный регион
-                    каждые две недели.
-                  </p>
-                </div>
-                <ArrowButton scrollTo="products" name="arrow" />
-              </div>
-            </section>
-
-            <section
-              id="products"
-              className="products"
-              data-aos="fade"
-              data-aos-delay="100"
-              data-aos-duration="1200"
-              data-aos-once="true"
-            >
+          {/* <section
+            id="products"
+            className="products"
+            data-aos="fade"
+            data-aos-delay="100"
+            data-aos-duration="1200"
+            data-aos-once="true"
+          >
+            <div className="products__wrapper">
               <h2 className="products__title">Наша продукция</h2>
               <div className="product__cards">
                 <ProductCard productTitle="Свинина" description={meat} />
-                <ProductCard productTitle="Курица" description={chicken} />
-
-                <ProductCard productTitle="Яйца" description={eggs} />
+                <ProductCard
+                  productTitle="Курица / Яйца"
+                  description={chicken}
+                />
               </div>
-              <ArrowButton scrollTo="media" name="arrow" />
-            </section>
+            </div>
+          </section>
 
-            <section
-              id="media"
-              className="media"
-              data-aos="fade"
-              data-aos-delay="100"
-              data-aos-duration="1200"
-              data-aos-once="true"
-              ref={section => {
-                this.media = section
-              }}
-            >
+          <section
+            id="media"
+            className="media"
+            data-aos="fade"
+            data-aos-delay="100"
+            data-aos-duration="1200"
+            data-aos-once="true"
+          >
+            <div className="media__wrapper">
               <h2 className="media__title">Instagram</h2>
               <span className="media__main-link">
                 <a
@@ -226,31 +230,34 @@ class IndexPage extends React.Component {
                   />
                 ))}
               </div>
-            </section>
-            <ArrowButton scrollTo="contacts" name="arrow" />
+            </div>
+          </section>
 
-            <section
-              id="contacts"
-              className="contacts"
-              data-aos="fade"
-              data-aos-delay="100"
-              data-aos-duration="1200"
-              data-aos-once="true"
-              ref={section => {
-                this.contacts = section
-              }}
-            >
+          <section
+            id="contacts"
+            className="contacts"
+            data-aos="fade"
+            data-aos-delay="100"
+            data-aos-duration="1200"
+            data-aos-once="true"
+            ref={section => {
+              this.contacts = section
+            }}
+          >
+            <div className="contacts__wrapper">
               <h2 className="contacts__title">Контакты</h2>
-              <div className="contacts__wrapper">
+              <div className="contacts__flex">
                 <div className="contacts__info">
                   Заказывайте доставку продуктов <br />
                   через Whatsapp или Telegram <br />
                   +7 (985) 741-19-91
                 </div>
-                <ContactForm />
+                <div className="contacts__form">
+                  <ContactForm />
+                </div>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>*/}
         </div>
       </Layout>
     )
@@ -269,7 +276,7 @@ export const fluidImage = graphql`
 
 export const pageQuery = graphql`
   query {
-    farm: file(relativePath: { eq: "farm3.jpg" }) {
+    farm: file(relativePath: { eq: "farm2.jpg" }) {
       ...fluidImage
     }
     farm_instagram: file(relativePath: { eq: "farm_instagram.jpg" }) {
@@ -282,6 +289,9 @@ export const pageQuery = graphql`
       ...fluidImage
     }
     pig_instagram: file(relativePath: { eq: "pig2_instagram.jpg" }) {
+      ...fluidImage
+    }
+    pig_about: file(relativePath: { eq: "pig_instagram.jpg" }) {
       ...fluidImage
     }
   }

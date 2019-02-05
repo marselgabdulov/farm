@@ -7,10 +7,49 @@
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  background-color: white;
+}
+
+.about__wrapper {
+  width: 80%;
+  height: 90%;
+  margin: auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.about__image {
+  width: 45%;
+  height: 85%;
+  margin-top: 1.5%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  overflow: hidden;
+}
+
+.about__image img {
+  max-width: 100%;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.about__image img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .about__text {
-  width: 55%;
+  width: 40%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* Small screens - MOBILE */
@@ -105,8 +144,8 @@
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
   .about {
-    margin: 0 auto 5% auto;
-    height: 75vh;
+    margin: auto;
+    height: calc(100vh - 75px);
   }
 
   .about__wrapper {
@@ -121,8 +160,8 @@
 
   .about__text {
     text-align: justify;
-    width: 60%;
-    margin: auto;
+    /* width: 60%;
+    margin: auto; */
   }
 }
 

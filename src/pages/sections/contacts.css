@@ -1,17 +1,28 @@
 .contacts {
-  margin: 5% auto;
+  margin: auto;
+  background-color: var(--yellow-color);
+  width: 100%;
+  height: calc(100vh - 175px);
 }
 .contacts__wrapper {
-  width: 100%;
+  width: 80%;
+  height: 80%;
+  margin: 4.5% 10%;
+  background-color: transparent;
+}
+
+.contacts__flex {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  height: 80%;
+  margin: auto;
 }
 
 .contacts__title {
+  padding-top: 0.5em;
   text-align: center;
-  margin-bottom: 1em;
 }
 
 /* Small screens - MOBILE */
@@ -73,8 +84,14 @@
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 @media only screen and (min-width: 90em) and (max-width: 120em) {
   .contacts__info {
-    width: 42%;
+    width: 30%;
     margin-left: auto;
+    margin-top: 2em;
+  }
+
+  .contacts__form {
+    width: 60%;
+    margin-top: 2em;
   }
 }
 

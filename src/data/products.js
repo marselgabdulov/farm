@@ -15,6 +15,5 @@ export const chicken = [
   { name: 'Курица для жарки', price: 300, measure: '1шт' },
   { name: 'Суповая курица', price: 400, measure: '1шт' },
   { name: 'Петух', price: 230, measure: '1шт' },
+  { name: 'Куриные яйца', price: 150, measure: 'десяток' },
 ]
-
-export const eggs = [{ name: 'Куриные яйца', price: 150, measure: 'десяток' }]

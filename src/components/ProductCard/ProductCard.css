@@ -1,6 +1,13 @@
 .product-card {
-  height: auto;
   margin: auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30vh;
 }
 
 .product-card__title {

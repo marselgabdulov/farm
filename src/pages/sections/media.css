@@ -1,7 +1,16 @@
 .media {
   text-align: center;
-  margin: 5% auto;
+  margin: auto;
   width: 100%;
+  height: calc(100vh - 75px);
+  background-color: white;
+}
+
+.media__wrapper {
+  width: 80%;
+  height: 80%;
+  margin: 4.5% 10%;
+  background-color: transparent;
 }
 
 .media__title {
@@ -15,9 +24,6 @@
   display: -ms-flex;
   display: flex;
   flex-wrap: wrap;
-}
-
-.media__main-link {
 }
 
 .media__main-link a {
