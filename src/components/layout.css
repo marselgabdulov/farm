@@ -59,6 +59,7 @@ h2 {
   line-height: 1.15384615;
   margin-top: 0.3em;
   font-family: 'IntroRust';
+  font-weight: normal;
 }
 
 h3 {

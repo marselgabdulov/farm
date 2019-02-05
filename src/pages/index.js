@@ -134,7 +134,7 @@ class IndexPage extends React.Component {
             </div>
           </section>
 
-          {/* <section
+          <section
             className="about"
             id="about"
             ref={section => {
@@ -180,7 +180,7 @@ class IndexPage extends React.Component {
                 </p>
               </div>
             </div>
-          </section> */}
+          </section>
 
           {/* <section
             id="products"
