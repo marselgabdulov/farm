@@ -15,6 +15,13 @@ class IndexPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)
     AOS.init()
+    var docWidth = document.documentElement.offsetWidth
+
+    ;[].forEach.call(document.querySelectorAll('*'), function(el) {
+      if (el.offsetWidth > docWidth) {
+        console.log(el)
+      }
+    })
   }
   scrollTo = element => {
     window.scroll({
@@ -206,7 +213,7 @@ class IndexPage extends React.Component {
               </div>
             </div>
           </section>
-          {/*
+
           <section
             id="media"
             className="media"
@@ -238,7 +245,7 @@ class IndexPage extends React.Component {
               </div>
             </div>
           </section>
-
+          {/*
           <section
             id="contacts"
             className="contacts"

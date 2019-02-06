@@ -16,18 +16,20 @@
 /* max-width 640px, mobile-only styles, orientation: portrait */
 @media only screen and (max-width: 40em) and (orientation: portrait) {
   .instagram-card {
-    --size: calc(90vw);
-    width: var(--size);
-    height: var(--size);
+    width: 88vw;
+    height: 88vw;
+    margin: 1vw;
+    opacity: 1;
   }
 }
 
 /* max-width 640px, mobile-only styles, orientation: landscape */
 @media only screen and (max-width: 40em) and (orientation: landscape) {
   .instagram-card {
-    --size: calc(45vw);
-    width: var(--size);
-    height: var(--size);
+    width: 43vw;
+    height: 43vw;
+    margin: 5em 1vw;
+    opacity: 1;
   }
 }
 
@@ -36,18 +38,20 @@
 /* min-width 641px and max-width 1024px, orientation: portrait */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
   .instagram-card {
-    --size: calc(45vw);
-    width: var(--size);
-    height: var(--size);
+    width: 43vw;
+    height: 43vw;
+    margin: 1vw;
+    opacity: 1;
   }
 }
 
 /* min-width 641px and max-width 1024px, orientation: landscape */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
   .instagram-card {
-    --size: calc(30vw);
-    width: var(--size);
-    height: var(--size);
+    width: 28vw;
+    height: 28vw;
+    margin: 1vw;
+    opacity: 1;
   }
 }
 
@@ -57,9 +61,9 @@
 /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
   .instagram-card {
-    --size: calc(19.75vw);
-    width: var(--size);
-    height: var(--size);
+    width: 18vw;
+    height: 19vw;
+    margin: 0 0.5vw;
   }
 }
 
@@ -68,9 +72,9 @@
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
   .instagram-card {
-    --size: calc(19.7vw);
-    width: var(--size);
-    height: var(--size);
+    width: 19.24vw;
+    height: 19vw;
+    margin: 0 0.3vw;
   }
 }
 
@@ -78,8 +82,34 @@
 /* min-width 1921px, xlarge screens */
 @media only screen and (min-width: 120.063em) {
   .instagram-card {
-    --size: calc(19.7vw);
-    width: var(--size);
-    height: var(--size);
+    width: 19.24vw;
+    height: 19vw;
+    margin: 0 0.3vw;
+  }
+}
+
+/* iPad Pro Portrait */
+@media only screen and (device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (min__moz-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1024px) and (orientation: portrait) and (min-device-pixel-ratio: 1.5) {
+  .instagram-card {
+    width: 43vw;
+    height: 43vw;
+    margin: 1vw;
+    opacity: 1;
+  }
+}
+
+/* iPad Pro Landscape */
+@media only screen and (device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (min__moz-device-pixel-ratio: 1.5),
+  only screen and (device-width: 1366px) and (orientation: landscape) and (min-device-pixel-ratio: 1.5) {
+  .instagram-card {
+    width: 43vw;
+    height: 43vw;
+    margin: 1vw;
+    opacity: 1;
   }
 }

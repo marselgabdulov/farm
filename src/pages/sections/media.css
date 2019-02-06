@@ -2,7 +2,14 @@
   text-align: center;
   margin: auto;
   width: 100%;
-  height: calc(100vh - 75px);
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
   background-color: white;
 }
 
@@ -27,12 +34,12 @@
 }
 
 .media__main-link a {
-  color: var(--link-blue-hover-color);
+  color: var(--link-blue-color);
   text-align: center;
 }
 
 .media__main-link a:hover {
-  color: var(--link-blue-color);
+  color: var(--link-orange-hover-color);
 }
 
 /* Small screens - MOBILE */
@@ -40,17 +47,54 @@
 /* max-width 640px, mobile-only styles, orientation: portrait */
 @media only screen and (max-width: 40em) and (orientation: portrait) {
   .media {
-    margin-top: 3em;
     text-align: left;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    background-color: white;
   }
 
-  .media__links :nth-child(1) {
+  .media__wrapper {
+    width: 90%;
+    height: 80%;
+    margin: 4.5% 5%;
+    background-color: transparent;
+  }
+
+  .media__links {
+    margin-top: 2em;
+    width: 100%;
+    height: auto;
+  }
+
+  .media__links :nth-child(4) {
     display: none;
   }
 }
 
 /* max-width 640px, mobile-only styles, orientation: landscape */
 @media only screen and (max-width: 40em) and (orientation: landscape) {
+  .media {
+    text-align: left;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .media__wrapper {
+    width: 90%;
+    height: 80%;
+    margin: 4.5% 5%;
+  }
+
+  .media__title {
+  }
+
+  .media__links {
+    margin-top: 2em;
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* Medium screens - TABLET */
@@ -58,12 +102,48 @@
 /* min-width 641px and max-width 1024px, orientation: portrait */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
   .media {
-    text-align: left;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .media__wrapper {
+    width: 90%;
+    height: 80%;
+    margin: 4.5% 5%;
+  }
+
+  .media__links {
+    margin-top: 2em;
+    width: 100%;
+    height: auto;
   }
 }
 
 /* min-width 641px and max-width 1024px, orientation: landscape */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
+  .media {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .media__wrapper {
+    width: 90%;
+    height: 80%;
+    margin: 4.5% 5%;
+  }
+
+  .media__title {
+  }
+
+  .media__links {
+    margin-top: 2em;
+    width: 100%;
+    height: auto;
+  }
   .media__links :nth-child(4) {
     display: none;
   }
@@ -74,17 +154,26 @@
 
 /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
 @media only screen and (min-width: 64.063em) and (max-width: 89.9em) {
+  .media {
+    height: calc(100vh - 100px);
+  }
 }
 
 /* XLarge screens */
 
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 @media only screen and (min-width: 90em) and (max-width: 120em) {
+  .media {
+    height: calc(100vh - 100px);
+  }
 }
 
 /* XXLarge screens */
 /* min-width 1921px, xlarge screens */
 @media only screen and (min-width: 120.063em) {
+  .media {
+    height: calc(100vh - 100px);
+  }
 }
 
 /* iPad Pro Portrait */
@@ -93,7 +182,25 @@
   only screen and (device-width: 1024px) and (orientation: portrait) and (min__moz-device-pixel-ratio: 1.5),
   only screen and (device-width: 1024px) and (orientation: portrait) and (min-device-pixel-ratio: 1.5) {
   .media {
-    text-align: left;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .media__wrapper {
+    width: 90%;
+    height: 80%;
+    margin: 4.5% 5%;
+  }
+
+  .media__title {
+  }
+
+  .media__links {
+    margin-top: 2em;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -102,4 +209,25 @@
   only screen and (device-width: 1366px) and (orientation: landscape) and (-o-min-device-pixel-ratio: 3/2),
   only screen and (device-width: 1366px) and (orientation: landscape) and (min__moz-device-pixel-ratio: 1.5),
   only screen and (device-width: 1366px) and (orientation: landscape) and (min-device-pixel-ratio: 1.5) {
+  .media {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .media__wrapper {
+    width: 90%;
+    height: 80%;
+    margin: 4.5% 5%;
+  }
+
+  .media__title {
+  }
+
+  .media__links {
+    margin-top: 2em;
+    width: 100%;
+    height: auto;
+  }
 }
