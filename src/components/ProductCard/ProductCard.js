@@ -3,6 +3,9 @@ import './ProductCard.css'
 
 const ProductCard = props => (
   <div className="product-card">
+    <div className="product-card__icon">
+      <img src={props.icon} alt="" />
+    </div>
     <h3 className="product-card__title">{props.productTitle}</h3>
     <div className="product-card__description">
       {props.description.map((item, index) => (

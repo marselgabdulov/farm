@@ -1,21 +1,5 @@
 .product-card {
-  margin: auto;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 30vh;
-}
-
-.product-card__title {
   text-align: center;
-  margin-bottom: 0.5em;
-}
-
-.product__position {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -24,24 +8,24 @@
   flex-direction: column;
 }
 
+.product-card__description {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
 /* Small screens - MOBILE */
-
 /* max-width 640px, mobile-only styles, orientation: portrait */
 @media only screen and (max-width: 40em) and (orientation: portrait) {
   .product-card {
     width: 100%;
-    height: auto;
-    margin: auto;
+    text-align: left;
   }
 
-  .product-card__title {
-    text-align: left;
-    margin-bottom: 0.5em;
-  }
-
-  .product__position {
-    text-align: left;
-    -ms-align-items: center;
+  .product-card__icon {
+    display: none;
   }
 }
 
@@ -49,18 +33,11 @@
 @media only screen and (max-width: 40em) and (orientation: landscape) {
   .product-card {
     width: 100%;
-    height: auto;
-    margin: auto;
+    text-align: left;
   }
 
-  .product-card__title {
-    text-align: left;
-    margin-bottom: 0.5em;
-  }
-
-  .product__position {
-    text-align: left;
-    -ms-align-items: center;
+  .product-card__icon {
+    display: none;
   }
 }
 
@@ -70,35 +47,21 @@
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
   .product-card {
     width: 100%;
-    height: auto;
-    margin: auto;
   }
 
-  .product-card__title {
-    text-align: left;
-    margin-bottom: 0.5em;
-  }
-
-  .product__position {
-    text-align: left;
-    -ms-align-items: center;
+  .product-card__icon {
+    display: none;
   }
 }
 
 /* min-width 641px and max-width 1024px, orientation: landscape */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
   .product-card {
-    width: 50%;
+    width: 45%;
   }
 
-  .product-card__title {
-    text-align: center;
-    margin-bottom: 0.5em;
-  }
-
-  .product__position {
-    text-align: center;
-    -ms-align-items: center;
+  .product-card__icon {
+    display: none;
   }
 }
 
@@ -108,17 +71,7 @@
 /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
   .product-card {
-    width: 50%;
-  }
-
-  .product-card__title {
-    text-align: center;
-    margin-bottom: 0.5em;
-  }
-
-  .product__position {
-    text-align: center;
-    -ms-align-items: center;
+    width: 40%;
   }
 }
 
@@ -127,17 +80,7 @@
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
   .product-card {
-    width: 50%;
-  }
-
-  .product-card__title {
-    text-align: center;
-    margin-bottom: 0.5em;
-  }
-
-  .product__position {
-    text-align: center;
-    -ms-align-items: center;
+    width: 40%;
   }
 }
 
@@ -145,17 +88,7 @@
 /* min-width 1921px, xlarge screens */
 @media only screen and (min-width: 120.063em) {
   .product-card {
-    width: 50%;
-  }
-
-  .product-card__title {
-    text-align: center;
-    margin-bottom: 0.5em;
-  }
-
-  .product__position {
-    text-align: center;
-    -ms-align-items: center;
+    width: 40%;
   }
 }
 
@@ -166,18 +99,10 @@
   only screen and (device-width: 1024px) and (orientation: portrait) and (min-device-pixel-ratio: 1.5) {
   .product-card {
     width: 100%;
-    height: auto;
-    margin: auto;
   }
 
-  .product-card__title {
-    text-align: left;
-    margin-bottom: 0.5em;
-  }
-
-  .product__position {
-    text-align: left;
-    -ms-align-items: center;
+  .product-card__icon {
+    display: none;
   }
 }
 
@@ -186,17 +111,4 @@
   only screen and (device-width: 1366px) and (orientation: landscape) and (-o-min-device-pixel-ratio: 3/2),
   only screen and (device-width: 1366px) and (orientation: landscape) and (min__moz-device-pixel-ratio: 1.5),
   only screen and (device-width: 1366px) and (orientation: landscape) and (min-device-pixel-ratio: 1.5) {
-  .product-card {
-    width: 50%;
-  }
-
-  .product-card__title {
-    text-align: center;
-    margin-bottom: 0.5em;
-  }
-
-  .product__position {
-    text-align: center;
-    -ms-align-items: center;
-  }
 }

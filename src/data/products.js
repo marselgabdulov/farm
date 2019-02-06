@@ -5,8 +5,6 @@ export const meat = [
   { name: 'Грудинка', price: 200, measure: '0.5кг' },
   { name: 'Ребрышки', price: 400, measure: '1кг' },
   { name: 'Рагу', price: 120, measure: '1кг' },
-  { name: 'Ножки', price: 24, measure: '0.8кг' },
-  { name: 'Фарш домашний', price: 365, measure: '0.5кг' },
 ]
 
 export const chicken = [

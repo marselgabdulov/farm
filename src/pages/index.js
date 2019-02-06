@@ -145,19 +145,19 @@ class IndexPage extends React.Component {
             data-aos-duration="1200"
             data-aos-once="true"
           >
-            <div className="about__wrapper">
-              <div
-                className="about__image"
-                data-aos="fade"
-                data-aos-delay="200"
-                data-aos-duration="1200"
-                data-aos-once="true"
-              >
+            <div
+              className="about__wrapper"
+              data-aos="fade"
+              data-aos-delay="100"
+              data-aos-duration="1200"
+              data-aos-once="true"
+            >
+              <div className="about__image">
                 <img
                   src={this.props.data.pig_about.childImageSharp.fluid.src}
                   alt="pig"
                   onClick={() =>
-                    this.scrollTo(document.getElementById('intro'))
+                    this.scrollTo(document.getElementById('products'))
                   }
                 />
               </div>
@@ -182,7 +182,7 @@ class IndexPage extends React.Component {
             </div>
           </section>
 
-          {/* <section
+          <section
             id="products"
             className="products"
             data-aos="fade"
@@ -192,16 +192,21 @@ class IndexPage extends React.Component {
           >
             <div className="products__wrapper">
               <h2 className="products__title">Наша продукция</h2>
-              <div className="product__cards">
-                <ProductCard productTitle="Свинина" description={meat} />
+              <div className="products__cards">
                 <ProductCard
+                  icon={this.props.data.chickenIcon.childImageSharp.fluid.src}
                   productTitle="Курица / Яйца"
                   description={chicken}
+                />
+                <ProductCard
+                  productTitle="Свинина"
+                  description={meat}
+                  icon={this.props.data.pigIcon.childImageSharp.fluid.src}
                 />
               </div>
             </div>
           </section>
-
+          {/*
           <section
             id="media"
             className="media"
@@ -293,6 +298,12 @@ export const pageQuery = graphql`
       ...fluidImage
     }
     pig_about: file(relativePath: { eq: "pig_instagram.jpg" }) {
+      ...fluidImage
+    }
+    chickenIcon: file(relativePath: { eq: "chicken.png" }) {
+      ...fluidImage
+    }
+    pigIcon: file(relativePath: { eq: "pig.png" }) {
       ...fluidImage
     }
   }

@@ -120,6 +120,9 @@
     width: 100%;
     margin-bottom: auto;
   }
+  .about__title {
+    text-align: center;
+  }
 }
 
 /* min-width 641px and max-width 1024px, orientation: landscape */
@@ -141,6 +144,9 @@
     width: 100%;
     margin-bottom: auto;
     text-align: left;
+  }
+  .about__title {
+    text-align: center;
   }
 }
 
@@ -242,6 +248,10 @@
     width: 100%;
     margin-bottom: auto;
   }
+
+  .about__title {
+    text-align: center;
+  }
 }
 
 /* iPad Pro Landscape */
@@ -254,17 +264,17 @@
     margin-bottom: 5%;
   }
   .about__wrapper {
-    width: 80%;
+    width: 90%;
     height: 90%;
   }
 
   .about__image {
-    width: 50%;
+    width: 45%;
     height: 100%;
   }
 
   .about__text {
-    width: 40%;
+    width: 45%;
     margin-top: 5%;
     margin-bottom: auto;
   }
