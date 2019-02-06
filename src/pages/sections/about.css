@@ -154,33 +154,33 @@
 /* min-width 1025px, large screens */
 
 /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+@media only screen and (min-width: 64.063em) and (max-width: 89.9em) {
   .about {
     height: calc(100vh - 100px);
   }
   .about__wrapper {
-    width: 80%;
+    width: 90%;
     height: 80%;
   }
 
   .about__image {
-    width: 50%;
+    width: 45%;
     height: 100%;
     margin-top: 5%;
   }
 
   .about__text {
-    width: 45%;
-    margin-top: 2%;
+    width: 50%;
+    margin-top: 5%;
     margin-bottom: auto;
-    font-size: 0.93em;
+    font-size: 0.97em;
   }
 }
 
 /* XLarge screens */
 
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
-@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+@media only screen and (min-width: 90em) and (max-width: 120em) {
   .about {
     height: calc(100vh - 100px);
   }
@@ -191,14 +191,16 @@
 
   .about__image {
     width: 45%;
-    height: 100%;
-    margin-top: 5%;
+    height: auto;
+    align-self: center;
   }
 
   .about__text {
     width: 40%;
     margin-top: auto;
     margin-bottom: auto;
+    -ms-align-self: center;
+    align-self: center;
   }
 }
 
@@ -271,11 +273,10 @@
   .about__image {
     width: 45%;
     height: 100%;
+    align-self: center;
   }
 
   .about__text {
     width: 45%;
-    margin-top: 5%;
-    margin-bottom: auto;
   }
 }

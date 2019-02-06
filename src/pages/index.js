@@ -245,7 +245,7 @@ class IndexPage extends React.Component {
               </div>
             </div>
           </section>
-          {/*
+
           <section
             id="contacts"
             className="contacts"
@@ -270,7 +270,7 @@ class IndexPage extends React.Component {
                 </div>
               </div>
             </div>
-          </section>*/}
+          </section>
         </div>
       </Layout>
     )

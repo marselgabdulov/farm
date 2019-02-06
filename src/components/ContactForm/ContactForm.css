@@ -41,12 +41,11 @@ textarea {
   width: 100%;
   font-size: 1em;
   height: 3em;
-  background-color: var(--dark-wine-color);
-  opacity: 0.9;
+  background-color: var(--purple-color);
 }
 
 .form-button:hover {
-  opacity: 1;
+  background-color: var(--dark-purple-color);
 }
 
 .input-comment {
@@ -74,14 +73,15 @@ textarea {
 /* min-width 641px and max-width 1024px, orientation: portrait */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
   .request-form {
-    width: 60%;
+    width: 80%;
   }
 }
 
 /* min-width 641px and max-width 1024px, orientation: landscape */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
   .request-form {
-    width: 60%;
+    width: 80%;
+    margin-left: 20%;
   }
 }
 
@@ -91,7 +91,7 @@ textarea {
 /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
 @media only screen and (min-width: 64.063em) and (max-width: 89.9em) {
   .request-form {
-    width: 59%;
+    width: 100%;
   }
 }
 
@@ -100,7 +100,7 @@ textarea {
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 @media only screen and (min-width: 90em) and (max-width: 120em) {
   .request-form {
-    width: 58%;
+    width: 100%;
   }
 }
 
@@ -118,7 +118,7 @@ textarea {
   only screen and (device-width: 1024px) and (orientation: portrait) and (min__moz-device-pixel-ratio: 1.5),
   only screen and (device-width: 1024px) and (orientation: portrait) and (min-device-pixel-ratio: 1.5) {
   .request-form {
-    width: 62%;
+    width: 60%;
   }
 }
 
@@ -128,6 +128,6 @@ textarea {
   only screen and (device-width: 1366px) and (orientation: landscape) and (min__moz-device-pixel-ratio: 1.5),
   only screen and (device-width: 1366px) and (orientation: landscape) and (min-device-pixel-ratio: 1.5) {
   .request-form {
-    width: 59%;
+    width: 100%;
   }
 }

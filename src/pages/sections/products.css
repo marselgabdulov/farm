@@ -138,8 +138,8 @@
 /* Large screens - DESKTOP */
 /* min-width 1025px, large screens */
 
-/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+/* min-width 1024px and max-width 1439px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 89.9em) {
   .products {
     height: calc(100vh - 100px);
   }
@@ -158,7 +158,7 @@
 /* XLarge screens */
 
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
-@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+@media only screen and (min-width: 90em) and (max-width: 120em) {
   .products {
     height: calc(100vh - 100px);
   }

@@ -1,6 +1,5 @@
 .contacts {
   margin: auto;
-  background-color: var(--yellow-color);
   width: 100%;
   height: calc(100vh - 175px);
 }
@@ -29,27 +28,77 @@
 
 /* max-width 640px, mobile-only styles, orientation: portrait */
 @media only screen and (max-width: 40em) and (orientation: portrait) {
+  .contacts {
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
   .contacts__wrapper {
+    width: 90%;
+    height: 90%;
+    margin: 4.5% 5%;
+  }
+
+  .contacts__title {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .contacts__flex {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .contacts__info {
     width: 100%;
     margin-bottom: 2em;
+  }
+
+  .contacts__title {
+    text-align: left;
+  }
+
+  .contacts__form {
+    width: 100%;
   }
 }
 
 /* max-width 640px, mobile-only styles, orientation: landscape */
 @media only screen and (max-width: 40em) and (orientation: landscape) {
+  .contacts {
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
   .contacts__wrapper {
+    width: 90%;
+    height: 90%;
+    margin: 4.5% 5%;
+  }
+
+  .contacts__title {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .contacts__flex {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .contacts__info {
     width: 100%;
     margin-bottom: 2em;
+  }
+
+  .contacts__title {
+    text-align: left;
+  }
+
+  .contacts__form {
+    width: 100%;
   }
 }
 
@@ -57,15 +106,64 @@
 
 /* min-width 641px and max-width 1024px, orientation: portrait */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
+  .contacts {
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
+  .contacts__wrapper {
+    width: 90%;
+    height: 90%;
+    margin: 4.5% 5%;
+  }
+
+  .contacts__title {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .contacts__flex {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   .contacts__info {
-    width: 38%;
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 2em;
+  }
+
+  .contacts__form {
+    width: 100%;
   }
 }
 
 /* min-width 641px and max-width 1024px, orientation: landscape */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
+  .contacts {
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
+  .contacts__wrapper {
+    width: 90%;
+    height: 90%;
+    margin: 4.5% 5%;
+  }
+
+  .contacts__title {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
   .contacts__info {
-    width: 38%;
+    width: 30%;
+  }
+
+  .contacts__form {
+    width: 70%;
   }
 }
 
@@ -74,8 +172,28 @@
 
 /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
 @media only screen and (min-width: 64.063em) and (max-width: 89.9em) {
+  .contacts {
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
+  .contacts__wrapper {
+    width: 90%;
+    height: 90%;
+    margin: 4.5% 5%;
+  }
+
+  .contacts__title {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
   .contacts__info {
     width: 40%;
+  }
+
+  .contacts__form {
+    width: 50%;
   }
 }
 
@@ -83,15 +201,28 @@
 
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 @media only screen and (min-width: 90em) and (max-width: 120em) {
+  .contacts {
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
+  .contacts__wrapper {
+    width: 80%;
+    height: 90%;
+    margin: 4.5% 10%;
+  }
+
+  .contacts__title {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
   .contacts__info {
-    width: 30%;
-    margin-left: auto;
-    margin-top: 2em;
+    width: 40%;
   }
 
   .contacts__form {
-    width: 60%;
-    margin-top: 2em;
+    width: 50%;
   }
 }
 
@@ -108,8 +239,36 @@
   only screen and (device-width: 1024px) and (orientation: portrait) and (-o-min-device-pixel-ratio: 3/2),
   only screen and (device-width: 1024px) and (orientation: portrait) and (min__moz-device-pixel-ratio: 1.5),
   only screen and (device-width: 1024px) and (orientation: portrait) and (min-device-pixel-ratio: 1.5) {
+  .contacts {
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
+  .contacts__wrapper {
+    width: 90%;
+    height: 90%;
+    margin: 4.5% 5%;
+  }
+
+  .contacts__title {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .contacts__flex {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   .contacts__info {
-    width: 36%;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 2em;
+  }
+
+  .contacts__form {
+    width: 100%;
   }
 }
 
@@ -118,7 +277,27 @@
   only screen and (device-width: 1366px) and (orientation: landscape) and (-o-min-device-pixel-ratio: 3/2),
   only screen and (device-width: 1366px) and (orientation: landscape) and (min__moz-device-pixel-ratio: 1.5),
   only screen and (device-width: 1366px) and (orientation: landscape) and (min-device-pixel-ratio: 1.5) {
+  .contacts {
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
+  .contacts__wrapper {
+    width: 90%;
+    height: 90%;
+    margin: 4.5% 5%;
+  }
+
+  .contacts__title {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
   .contacts__info {
     width: 40%;
+  }
+
+  .contacts__form {
+    width: 50%;
   }
 }

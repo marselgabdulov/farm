@@ -158,16 +158,16 @@
 /* min-width 1025px, large screens */
 
 /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+@media only screen and (min-width: 64.063em) and (max-width: 89.9em) {
   .intro {
     margin-top: 100px;
     height: calc(100vh - 100px);
   }
 
   .intro__image {
-    width: 80%;
+    width: 90%;
     height: 80%;
-    margin: 5.3% 10%;
+    margin: 5.3% 5%;
   }
 
   .intro__text {

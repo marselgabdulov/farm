@@ -2,9 +2,9 @@
 
 /*----- Colors ------*/
 :root {
-  --some-green-color: #3a7160;
-  --dark-green-color: #145a44;
-
+  --dark-green-color: #3a7160;
+  --purple-color: #9e5162;
+  --dark-purple-color: #7f3343;
   --link-blue-color: rgb(25, 90, 187);
   --link-orange-hover-color: rgb(226, 153, 29);
 }
@@ -29,7 +29,7 @@
 
 html,
 body {
-  font-size: 18px;
+  font-size: 100%;
   font-family: 'IBMPlexMono';
 }
 
@@ -138,7 +138,7 @@ h3 {
   left: 0;
   z-index: 100;
   position: fixed;
-  background-color: var(--some-green-color);
+  background-color: var(--dark-green-color);
 }
 
 .header__wrapper {
@@ -160,7 +160,7 @@ h3 {
 }
 
 .header__button {
-  background-color: var(--some-green-color);
+  background-color: var(--dark-green-color);
   color: white;
   text-transform: uppercase;
   font-weight: bold !important;
@@ -329,6 +329,10 @@ h3 {
 /* XXLarge screens */
 /* min-width 1921px, xlarge screens */
 @media only screen and (min-width: 120.063em) {
+  html,
+  body {
+    font-size: 1.1em;
+  }
   .header__wrapper {
     width: 80%;
   }
